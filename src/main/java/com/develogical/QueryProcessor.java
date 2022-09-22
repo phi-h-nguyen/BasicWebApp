@@ -41,7 +41,7 @@ public class QueryProcessor {
             return Integer.toString(sum);
         }
         if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("largest")) {
-            String[] splited = query.split("\\s+");
+            String[] splited = query.split("[\\s+,]");
             int max = 0;
 
             for (String s : splited) {
