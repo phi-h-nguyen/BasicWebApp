@@ -40,6 +40,17 @@ public class QueryProcessor {
             }
             return Integer.toString(sum);
         }
+        if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("largest")) {
+            String[] splited = query.split("\\s+");
+            int max = 0;
+
+            for (String s : splited) {
+                if (isNumeric(s)) {
+                    max = Integer.max(max, Integer.parseInt(s));
+                }
+            }
+            return Integer.toString(max);
+        }
         return "";
     }
 }
