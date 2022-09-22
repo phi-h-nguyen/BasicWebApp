@@ -12,7 +12,7 @@ public class QueryProcessor {
             return "totally my fav class!";
         }
         if (query.toLowerCase().contains("what is your name")) {
-            return "phi";
+            return "someone";
         }
         return "";
     }
