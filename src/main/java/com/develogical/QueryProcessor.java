@@ -74,7 +74,7 @@ public class QueryProcessor {
             }
             return Integer.toString(mult);
         }
-        if (query.toLowerCase().contains("which of the following numbers are prime")) {
+        if (query.toLowerCase().contains("prime")) {
             String[] splited = query.split("[\\s+,]");
 
             for (String s : splited) {
