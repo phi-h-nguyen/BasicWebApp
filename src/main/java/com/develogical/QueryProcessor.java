@@ -61,13 +61,15 @@ public class QueryProcessor {
             }
             return Integer.toString(max);
         }
-        if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("multplied")) {
-            String[] splited = query.split("[\\s+,]");
+        if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("multiplied")) {
+            String[] splited = query.split("[\\s+]");
             int mult = 1;
-
+            System.out.println(splited);
             for (String s : splited) {
                 if (isNumeric(s)) {
                     mult *= Integer.parseInt(s);
+                    System.out.println("mult");
+                    System.out.println(s);
                 }
             }
             return Integer.toString(mult);
