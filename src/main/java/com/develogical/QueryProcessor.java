@@ -40,8 +40,8 @@ public class QueryProcessor {
             }
             return Integer.toString(sum);
         }
-        if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("largest")) {
-            String[] splited = query.split("[\\s+,:]");
+        if (query.toLowerCase().contains("which of the following numbers is the largest")) {
+            String[] splited = query.split("[\\s+,]");
             int max = 0;
 
             for (String s : splited) {
