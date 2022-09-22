@@ -17,6 +17,16 @@ public class QueryProcessor {
         return true;
     }
 
+    public static boolean isPrime(int num) {
+        for (int i = 2; i <= num / 2; ++i) {
+        // condition for nonprime number
+        if (num % i == 0) {
+            return true;
+        }
+        }
+        return false;
+    }   
+
     public String process(String query) {
         if (query.toLowerCase().contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
@@ -61,6 +71,18 @@ public class QueryProcessor {
                 }
             }
             return Integer.toString(mult);
+        }
+        if (query.toLowerCase().contains("which of the following numbers are prime")) {
+            String[] splited = query.split("[\\s+,]");
+
+            for (String s : splited) {
+                if (isNumeric(s)) {
+                    if (isPrime(Integer.parseInt(s))) {
+                        return s;
+                    }
+                }
+            }
+            return "";
         }
         return "";
     }
